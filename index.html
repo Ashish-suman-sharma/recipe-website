@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodie Moods - Interactive Recipe Discovery</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Loading Animation -->
+    <div class="loader">
+        <div class="loader-content">
+            <i class="fas fa-utensils"></i>
+            <p>Preparing your experience...</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav-container glass-effect">
+        <div class="logo">
+            <<img width="45" height="45" src="https://img.icons8.com/fluency/50/cute-pumpkin.png" alt="cute-pumpkin"/>
+        </div>
+        <div class="nav-links">
+            <a href="#home" class="active">Home</a>
+            <a href="#ingredients">Ingredients Search</a>
+            <a href="#recipe-search">Recipe Search</a>
+            <a href="#mood-food">Mood Food</a>
+        </div>
+        <div class="weather-widget glass-effect">
+            <i class="fas fa-cloud"></i>
+            <span id="temperature">Loading...</span>
+            <span id="location">Loading...</span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section">
+        <div class="hero-content glass-effect">
+            <h1>Discover Perfect Recipes</h1>
+            <p>Find delicious recipes based on your ingredients, cravings, or mood</p>
+            <div class="search-container">
+                <input type="text" placeholder="Search for recipes..." class="main-search">
+                <button class="search-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Features Grid -->
+    <section class="features-grid">
+        <div class="feature-card glass-effect" data-feature="ingredients">
+            <i class="fas fa-carrot"></i>
+            <h3>Cook with What You Have</h3>
+            <p>Input your available ingredients and discover possible recipes</p>
+        </div>
+        <div class="feature-card glass-effect" data-feature="recipe-search">
+            <i class="fas fa-search"></i>
+            <h3>Find Specific Recipes</h3>
+            <p>Search our extensive database for any recipe</p>
+        </div>
+        <div class="feature-card glass-effect" data-feature="mood-food">
+            <i class="fas fa-smile"></i>
+            <h3>Mood-Based Suggestions</h3>
+            <p>Get food recommendations based on your current mood</p>
+        </div>
+    </section>
+
+    <!-- Main Content Area -->
+    <main id="main-content">
+        <!-- Dynamic content will be loaded here -->
+    </main>
+
+
+    <!-- Scripts -->
+    <script src="js/config.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+/* Loader Animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    animation: fadeOut 0.5s ease-in-out forwards;
+    animation-delay: 2s;
+}
+
+.loader-content {
+    text-align: center;
+}
+
+.loader-content i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    animation: spin 1s linear infinite;
+}
+
+/* Page Transitions */
+.page-transition {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Hover Animations */
+@keyframes pulseScale {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.feature-card:hover i {
+    animation: pulseScale 1s ease-in-out infinite;
+}
+
+/* Button Animations */
+.btn-hover {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-hover::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease-out, height 0.6s ease-out;
+}
+
+.btn-hover:hover::after {
+    width: 300px;
+    height: 300px;
+}
+
+/* Card Hover Effects */
+@keyframes cardLift {
+    from { transform: translateY(0); }
+    to { transform: translateY(-10px); }
+}
+
+.card-hover {
+    transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+    animation: cardLift 0.3s ease forwards;
+    box-shadow: 0 15px 30px var(--shadow-color);
+}
+
+/* Micro-interactions */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+.error-shake {
+    animation: shake 0.3s ease-in-out;
+}
+
+/* Loading Spinner */
+@keyframes loadingSpin {
+    to { transform: rotate(360deg); }
+}
+
+.loading-spinner {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--primary-color);
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: loadingSpin 1s linear infinite;
+}
